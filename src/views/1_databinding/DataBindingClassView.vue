@@ -1,0 +1,35 @@
+<!-- eslint-disable vue/valid-template-root -->
+<template>
+    <div>
+       <div :class="{ 'text-red': true, active: true }"> Class Binding </div>
+       <div :class="{ 'text-red': hasError, active: isActive }"> Class Binding </div>
+       <div :class="class2"> class binding 2</div>
+    </div>
+</template>
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      isActive: false,
+      hasError: true,
+      class2: ['active', 'hasError']
+    }
+  },
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+  methods: {}
+}
+</script>
+<style scoped>
+.active {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+.text-red{
+  color:red;
+}
+</style>
