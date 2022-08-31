@@ -52,3 +52,7 @@ export default {
   methods: {}
 }
 </script>
+
+
+
+🔖 API Practice source: https://jsonplaceholder.typicode.com/posts
