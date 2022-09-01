@@ -26,3 +26,35 @@ export default {
 # 🚀 Source
 
 🔖 API Practice source: https://jsonplaceholder.typicode.com/posts
+
+
+
+🔖HomeView.vue
+
+
+  //mounted() {
+ // apiBoard.getArticle(1)
+    //   .then(function (response) {
+    //     console.log('getArticle', response)
+    //   })
+    //   .catch(function (e) {
+    //     console.log(e)
+    //   })
+
+    // apiBoard.getArticles(0)
+    //   .then(function (response) {
+    //     console.log('getArticles', response)
+    //   })
+    //   .catch(function (e) {
+    //     console.log(e)
+    //   })
+
+    // apiBoard.postArticle(0)
+    //   .then(function(response) {
+    //     console.log('postArticle', response)
+    //   })
+    //   .catch(function (e) {
+    //     console.log(e)
+    //   })
+
+    // },

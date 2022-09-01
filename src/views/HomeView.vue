@@ -1,4 +1,11 @@
 <template>
+  <hi> {{title}}</hi>
+  <el-table :data="articles" style="width: 100%">
+    <el-table-column prop="id" label="id" width="80"></el-table-column>
+    <el-table-column prop="userId" label="userId" width="120"></el-table-column>
+    <el-table-column prop="title" label="title"></el-table-column>
+
+  </el-table>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -11,30 +18,21 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import apiBoard from '@/api/board'
 
 export default {
+  data() {
+    return {
+      title: 'hi, ahahaha',
+      articles: null
+    }
+  },
   mounted() {
-    apiBoard.getArticle(1)
-      .then(function (response) {
-        console.log('getArticle', response)
-      })
-      .catch(function (e) {
-        console.log(e)
-      })
-
     apiBoard.getArticles(0)
-      .then(function (response) {
-        console.log('getArticles', response)
+      .then((response) => {
+        console.log('getArticle', response)
+        this.articles = response.data
       })
-      .catch(function (e) {
+      .catch((e) => {
         console.log(e)
-      })
-
-    apiBoard.postArticle(0)
-      .then(function(response) {
-        console.log('postArticle', response)
-      })
-      .catch(function (e) {
-        console.log(e)
-      })
+      })/*  <--- error function을 이용한  */
   },
   name: 'HomeView',
   components: {
