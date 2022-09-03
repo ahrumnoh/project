@@ -1,6 +1,10 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable no-labels -->
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <hi> {{title}}</hi>
-  <el-table :data="articles" style="width: 100%">
+  <el-table @row-click="rowClicked" :data="articles" style="width: 100%">
     <el-table-column prop="id" label="id" width="80"></el-table-column>
     <el-table-column prop="userId" label="userId" width="120"></el-table-column>
     <el-table-column prop="title" label="title"></el-table-column>
@@ -13,7 +17,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import HelloWorld from '@/components/HelloWorld.vue'
 import apiBoard from '@/api/board'
 
@@ -34,10 +38,18 @@ export default {
         console.log(e)
       })/*  <--- error function을 이용한  */
   },
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  methods: {
+    rowClicked(row) {
+      this.$router.push({
+        path: `/board/detail/${row.id}`
+      })
+    },
+    name: 'HomeView',
+    components: {
+      HelloWorld
 
+    }
   }
 }
+
 </script>

@@ -58,3 +58,29 @@ export default {
     //   })
 
     // },
+
+
+
+
+
+
+
+<!-- eslint-disable vue/multi-word-component-names -->
+<template>
+    <div></div>
+</template>
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      sampleData: ''
+    }
+  },
+  setup() {},
+  created() {},
+  mounted() {},
+  unmounted() {},
+  methods: {}
+}
+</script>
